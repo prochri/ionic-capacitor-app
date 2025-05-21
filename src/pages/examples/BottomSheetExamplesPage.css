@@ -1,0 +1,59 @@
+/* Bottom Sheet Styles */
+.bottom-sheet-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0;
+    z-index: 10;
+  }
+  
+  .bottom-sheet {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 11;
+    transform: translateY(100%);
+    max-height: 70vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .bottom-sheet-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .bottom-sheet-content {
+    padding: 16px;
+    overflow-y: auto;
+    flex: 1;
+  }
+  
+  .bottom-sheet-footer {
+    padding: 16px;
+    border-top: 1px solid #eee;
+  }
+  
+  /* Task Styles */
+  .completed-task h2 {
+    text-decoration: line-through;
+    color: var(--ion-color-medium);
+  }
+  
+  .completion-button {
+    margin-right: 8px;
+  }
+  
+  .add-task-button {
+    margin-bottom: 16px;
+  }

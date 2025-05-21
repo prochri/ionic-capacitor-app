@@ -1,0 +1,68 @@
+/* Status Bar padding CSS */
+
+/* Set safe area variables */
+:root {
+    --ion-safe-area-top: env(safe-area-inset-top, 24px);
+    --status-bar-height: var(--ion-safe-area-top, 24px);
+  }
+  
+  /* Add padding to toolbar specifically for status bar */
+  .status-bar-padding ion-toolbar {
+    --padding-top: var(--status-bar-height);
+    --min-height: 56px;
+    min-height: calc(56px + var(--status-bar-height)) !important;
+  }
+  
+  /* Make sure the header scales properly */
+  .status-bar-padding ion-header {
+    height: auto !important;
+  }
+  
+  /* Adjust content spacing */
+  .status-bar-padding ion-content {
+    --padding-top: 0;
+  }
+  
+  /* Ensure modal toolbars also have proper padding */
+  .status-bar-padding ion-modal ion-toolbar {
+    --padding-top: var(--status-bar-height);
+    min-height: calc(56px + var(--status-bar-height)) !important;
+  }
+  
+  /* Adjust back button positioning */
+  .status-bar-padding ion-back-button {
+    margin-top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Make sure title is vertically centered in the padded area */
+  .status-bar-padding ion-title {
+    padding-top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Fix buttons in header */
+  .status-bar-padding ion-buttons {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Fix for different Android versions */
+  @supports (padding-top: constant(safe-area-inset-top)) {
+    .status-bar-padding ion-toolbar {
+      --padding-top: constant(safe-area-inset-top);
+      min-height: calc(56px + constant(safe-area-inset-top)) !important;
+    }
+  }
+  
+  @supports (padding-top: env(safe-area-inset-top)) {
+    .status-bar-padding ion-toolbar {
+      --padding-top: env(safe-area-inset-top);
+      min-height: calc(56px + env(safe-area-inset-top)) !important;
+    }
+  }

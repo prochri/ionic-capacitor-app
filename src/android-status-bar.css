@@ -1,0 +1,51 @@
+/* Android-specific status bar fixes */
+:root {
+    --status-bar-height: 24px; /* Default, will be overridden by JavaScript */
+  }
+  
+  /* Add padding to the top when on Android */
+  .android-status-bar-padding ion-header {
+    padding-top: var(--status-bar-height) !important;
+  }
+  
+  /* Ensure the content aligns properly with the status bar */
+  .android-status-bar-padding ion-toolbar:first-of-type {
+    --padding-top: var(--status-bar-height) !important;
+  }
+  
+  /* Fix for Android content scrolling under status bar */
+  .android-status-bar-padding ion-content {
+    --offset-top: var(--status-bar-height) !important;
+  }
+  
+  /* Make sure modals and popups respect the status bar */
+  .android-status-bar-padding ion-modal ion-header {
+    padding-top: var(--status-bar-height) !important;
+  }
+  
+  /* Fix for the page transitions */
+  .android-status-bar-padding .ion-page {
+    padding-top: var(--status-bar-height) !important;
+  }
+  
+  /* Make the status bar spacer fixed */
+  .status-bar-spacer {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 10000 !important;
+    pointer-events: none !important;
+  }
+  
+  /* Fix for tab bar pages */
+  .android-status-bar-padding ion-tabs ion-header {
+    top: var(--status-bar-height) !important;
+  }
+  
+  /* Specific fix for notched Android devices */
+  @supports (padding-top: env(safe-area-inset-top)) {
+    .android-status-bar-padding ion-header {
+      padding-top: max(var(--status-bar-height), env(safe-area-inset-top)) !important;
+    }
+  }

@@ -1,0 +1,189 @@
+/* Core CSS required for Ionic components to work properly */
+@import '~@ionic/react/css/core.css';
+
+/* Basic CSS for apps built with Ionic */
+@import '~@ionic/react/css/normalize.css';
+@import '~@ionic/react/css/structure.css';
+@import '~@ionic/react/css/typography.css';
+
+/* Optional CSS utils that can be commented out */
+@import '~@ionic/react/css/padding.css';
+@import '~@ionic/react/css/float-elements.css';
+@import '~@ionic/react/css/text-alignment.css';
+@import '~@ionic/react/css/text-transformation.css';
+@import '~@ionic/react/css/flex-utils.css';
+@import '~@ionic/react/css/display.css';
+
+/* Safe area variables */
+:root {
+  --ion-safe-area-top: env(safe-area-inset-top);
+  --ion-safe-area-bottom: env(safe-area-inset-bottom);
+  --ion-safe-area-left: env(safe-area-inset-left);
+  --ion-safe-area-right: env(safe-area-inset-right);
+}
+
+/* Fix for status bar overlap */
+ion-header {
+  position: fixed;
+}
+
+ion-toolbar:first-of-type {
+  padding-top: var(--ion-safe-area-top);
+}
+
+ion-toolbar {
+  --padding-top: var(--ion-safe-area-top);
+  --padding-start: var(--ion-safe-area-left);
+  --padding-end: var(--ion-safe-area-right);
+}
+
+ion-tabs ion-tab-bar {
+  padding-bottom: var(--ion-safe-area-bottom);
+}
+
+ion-content {
+  --padding-top: var(--ion-safe-area-top);
+  --padding-bottom: var(--ion-safe-area-bottom);
+  --padding-start: var(--ion-safe-area-left);
+  --padding-end: var(--ion-safe-area-right);
+}
+
+/* For Android StatusBar height issues */
+.statusbar-padding {
+  padding-top: var(--ion-safe-area-top);
+}
+
+/* For iOS notch devices */
+@supports (padding-top: constant(safe-area-inset-top)) {
+  ion-toolbar:first-of-type {
+    padding-top: constant(safe-area-inset-top);
+  }
+}
+
+@supports (padding-top: env(safe-area-inset-top)) {
+  ion-toolbar:first-of-type {
+    padding-top: env(safe-area-inset-top);
+  }
+}
+
+/* Android specifically */
+.md ion-header {
+  height: auto;
+}
+
+.md ion-toolbar:first-of-type {
+  padding-top: var(--ion-safe-area-top, 0);
+}
+
+/* iOS specifically */
+.ios ion-header {
+  height: auto;
+}
+
+.ios ion-toolbar:first-of-type {
+  padding-top: var(--ion-safe-area-top, 0);
+}
+
+/* for roomplan camera scanning css start here */
+/* Room Scanner Styles for global.css or as a separate CSS file */
+
+/* Scanner page specific styles */
+.scanner-page {
+  --background: transparent !important;
+  background-color: transparent !important;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Camera content area */
+.camera-content {
+  --background: transparent !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  position: relative;
+  height: 100%;
+}
+
+/* Instructions in camera view */
+.camera-instructions {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.instruction-text {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px 15px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+/* Header styling */
+.transparent-header {
+  --background: rgba(0, 0, 0, 0.3) !important;
+  --border-color: transparent !important;
+  background: transparent !important;
+}
+
+.transparent-header ion-toolbar {
+  --background: transparent !important;
+  --color: white !important;
+  background: transparent !important;
+}
+
+/* iOS Bottom Sheet Modal styling */
+.ios-bottom-sheet {
+  --height: 20%;
+  --background: white;
+  --border-radius: 16px 16px 0 0;
+  --box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ios-bottom-sheet::part(handle) {
+  background: #ddd;
+  width: 36px;
+  height: 4px;
+  border-radius: 2px;
+}
+
+/* Styling for the buttons inside the bottom sheet */
+.start-scan-button {
+  --border-radius: 30px;
+  --background: #30d158; /* iOS-style green color */
+  font-size: 18px;
+  font-weight: 500;
+  height: 46px; /* Slightly smaller to fit better in 20% modal */
+  margin: 0 0 10px 0; /* Reduced bottom margin */
+  width: 100%;
+}
+
+.cancel-button {
+  --color: #ff3b30; /* iOS-style red color */
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 auto;
+}
+
+/* Make the body and webview transparent when camera is active */
+body.camera-active {
+  background-color: transparent !important;
+}
+
+body.camera-active ion-app {
+  --background: transparent !important;
+}
+
+/* Ensure room data card doesn't get cut off by fixed bottom sheet */
+.ion-margin-bottom {
+  margin-bottom: 30px !important;
+}

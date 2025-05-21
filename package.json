@@ -1,0 +1,77 @@
+{
+  "name": "ionic-capacitor-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "ionic:serve": "react-scripts start",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --transformIgnorePatterns 'node_modules/(?!(@ionic/react|@ionic/react-router|@ionic/core|@stencil/core|ionicons)/)'",
+    "eject": "react-scripts eject",
+    "resources": "capacitor-resources -p android,ios",
+    "cap:add:android": "npx cap add android",
+    "cap:add:ios": "npx cap add ios",
+    "cap:sync": "npx cap sync",
+    "cap:open:android": "npx cap open android",
+    "cap:open:ios": "npx cap open ios"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "An Ionic Capacitor application example",
+  "dependencies": {
+    "@capacitor-community/camera-preview": "^7.0.1",
+    "@capacitor/android": "^7.2.0",
+    "@capacitor/app": "7.0.1",
+    "@capacitor/camera": "^7.0.1",
+    "@capacitor/core": "^7.2.0",
+    "@capacitor/geolocation": "^7.1.2",
+    "@capacitor/haptics": "7.0.1",
+    "@capacitor/ios": "^7.2.0",
+    "@capacitor/keyboard": "7.0.1",
+    "@capacitor/status-bar": "7.0.1",
+    "@ionic/react": "^7.7.0",
+    "@ionic/react-router": "^7.7.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.2.1",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.5.14",
+    "@types/leaflet": "^1.9.17",
+    "@types/node": "^20.4.0",
+    "@types/react": "^18.2.65",
+    "@types/react-dom": "^18.2.21",
+    "@types/react-router": "^5.1.20",
+    "@types/react-router-dom": "^5.3.3",
+    "ionicons": "^7.2.2",
+    "leaflet": "^1.9.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router": "^5.3.4",
+    "react-router-dom": "^5.3.4",
+    "typescript": "^4.9.5",
+    "web-vitals": "^3.5.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^7.2.0",
+    "capacitor-resources": "^2.0.5",
+    "react-scripts": "5.0.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

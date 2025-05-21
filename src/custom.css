@@ -1,0 +1,72 @@
+/* Custom CSS for Status Bar and Navigation Bar fixes */
+
+/* Ensure app starts below status bar */
+.has-status-bar ion-app {
+    padding-top: 30px !important;
+  }
+  
+  /* Fix header positioning */
+  .has-status-bar ion-header {
+    position: absolute;
+    top: 30px !important;
+    left: 0;
+    right: 0;
+    height: 56px !important;
+    z-index: 1000;
+  }
+  
+  /* Make sure toolbar has correct height */
+  .has-status-bar ion-toolbar {
+    --min-height: 56px !important;
+    height: 56px !important;
+  }
+  
+  /* Adjust content positioning */
+  .has-status-bar ion-content {
+    --padding-top: 56px !important;
+    margin-top: 30px !important;
+  }
+  
+  /* Fix page positioning */
+  .has-status-bar ion-page {
+    padding-top: 30px !important;
+  }
+  
+  /* Ensure router outlet is positioned correctly */
+  .has-status-bar ion-router-outlet {
+    margin-top: 30px !important;
+  }
+  
+  /* Make sure content doesn't scroll under status bar */
+  .has-status-bar .ion-page-hidden {
+    top: 30px !important;
+  }
+  
+  /* Fix for the tabs router outlet */
+  .has-status-bar ion-tabs ion-router-outlet {
+    margin-top: 30px !important;
+  }
+  
+  /* Fix for modal dialogs */
+  .has-status-bar ion-modal ion-header {
+    top: 0 !important;
+  }
+  
+  /* Fix for back button vertical centering */
+  .has-status-bar ion-back-button {
+    display: flex;
+    align-items: center;
+    height: 56px;
+  }
+  
+  /* Ensure title is vertically centered */
+  .has-status-bar ion-title {
+    display: flex;
+    align-items: center;
+    height: 56px;
+  }
+  
+  /* Fix for bottom tab bar */
+  .has-status-bar ion-tab-bar {
+    height: 56px !important;
+  }
