@@ -31,38 +31,9 @@ This repository contains an Ionic application with Capacitor integration that ut
    npx cap sync
    ```
 
-## Configure RoomPlanPlugin
 
-1. Open the Capacitor configuration file:
+## Run the project with live reload
+
    ```bash
-   open ios/App/App/capacitor.config.json
+npx cap run ios --live-reload1.
    ```
-
-2. Add "RoomPlanPlugin" to the plugins list "packageClassList"
-   ```json
-   "packageClassList": [
-      "CameraPreview",
-      "AppPlugin",
-      "CAPCameraPlugin",
-      "GeolocationPlugin",
-      "HapticsPlugin",
-      "KeyboardPlugin",
-      "StatusBarPlugin",
-      "RoomPlanPlugin"
-   ]
-   ```
-
-## Run the project in Xcode
-
-1. Open the iOS project in Xcode:
-   ```bash
-   npx cap open ios
-   ```
-
-2. In Xcode, select your development team in the "Signing & Capabilities" tab.
-
-3. Connect your iOS device (must have LiDAR sensor).
-
-4. Select your device from the device dropdown menu in Xcode.
-
-5. Click the "Run" button in Xcode or press Cmd+R to build and run the application on your device.
