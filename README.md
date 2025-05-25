@@ -35,5 +35,5 @@ This repository contains an Ionic application with Capacitor integration that ut
 ## Run the project with live reload
 
    ```bash
-npx cap run ios --live-reload1.
-   ```
+npx cap run ios --live-reload
+```
