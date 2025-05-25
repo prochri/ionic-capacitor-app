@@ -125,9 +125,8 @@ const CameraExamplesPage: React.FC = () => {
     return `
 Room ID: ${room.identifier || "N/A"}
 Story: ${room.story || "N/A"}
-Created: ${
-      room.dateCreated ? new Date(room.dateCreated).toLocaleString() : "N/A"
-    }
+Created: ${room.dateCreated ? new Date(room.dateCreated).toLocaleString() : "N/A"
+      }
 Confidence: ${room.confidence || "N/A"}
 Walls: ${room.walls?.length || 0}
 Doors: ${room.doors?.length || 0}
