@@ -34,6 +34,12 @@ This repository contains an Ionic application with Capacitor integration that ut
 
 ## Run the project with live reload
 
+Deploy the ios app
    ```bash
 npx cap run ios --live-reload
+```
+
+Start the web app
+```bash
+npm run start
 ```
